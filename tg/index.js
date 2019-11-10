@@ -15,7 +15,7 @@ bot.on('text', (msg) => {
   if (msg.text === "ping") {
     bot.sendMessage(msg.chat.id, 'hello, world').then(cls)
   } else {
-    bot.sendMessage(msg.chat.id, wana.toRomaji(msg.text)).then(cls)
+    bot.sendMessage(msg.chat.id, wana.toRomaji(msg.text.replace(/^\/r(@toromajibot)? /g, ""))).then(cls)
   }
 });
 
