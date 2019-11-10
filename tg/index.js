@@ -13,7 +13,7 @@ function cls() {
 
 bot.on('text', (msg) => {
   bot.sendMessage(msg.chat.id, wana.toRomaji(msg.text.replace(/^\/r(@toromajibot)? /g, "")), {
-    reply_to_message_id: msg.id
+    reply_to_message_id: msg.message_id
   }).then(cls)
 });
 
