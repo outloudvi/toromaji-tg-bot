@@ -1,0 +1,12 @@
+{
+    "builds": [
+        {
+            "src": "tg/*.js",
+            "use": "@now/node"
+        },
+        {
+            "src": "*.html",
+            "use": "@now/static"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "toromaji-tg-bot",
+  "version": "1.0.0",
+  "description": "Transforming hiraganas and katakatas to romaji.",
+  "author": "Outvi V <oss+npm@outv.im>",
+  "license": "MIT",
+  "homepage": "https://github.com/outloudvi/toromaji-tg-bot",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/outloudvi/toromaji-tg-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/outloudvi/toromaji-tg-bot/issues"
+  },
+  "main": "tg/index.js",
+  "engines": {
+    "node": ">=8.1"
+  },
+  "dependencies": {
+    "nanoid": "^2.1.6",
+    "node-telegram-bot-api": "^0.40.0",
+    "wanakana": "^4.0.2"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "zeit",
+    "serverless",
+    "telegram",
+    "bot"
+  ]
+}
