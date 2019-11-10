@@ -13,9 +13,13 @@ function cls() {
 
 bot.on('text', (msg) => {
   if (msg.reply_to_message) {
-    bot.sendMessage(msg.chat.id, wana.toRomaji(msg.reply_to_message.text.replace(/^\/r(@toromajibot)? /g, ""))).then(cls)
+    bot.sendMessage(msg.chat.id, wana.toRomaji(msg.reply_to_message.text.replace(/^\/r(@toromajibot)? /g, "")), {
+      reply_to_message_id: msg.id
+    }).then(cls)
   } else {
-    bot.sendMessage(msg.chat.id, wana.toRomaji(msg.text.replace(/^\/r(@toromajibot)? /g, ""))).then(cls)
+    bot.sendMessage(msg.chat.id, wana.toRomaji(msg.text.replace(/^\/r(@toromajibot)? /g, "")), {
+      reply_to_message_id: msg.id
+    }).then(cls)
   }
 });
 
