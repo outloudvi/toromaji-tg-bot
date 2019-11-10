@@ -12,7 +12,9 @@ function cls() {
 }
 
 bot.on('text', (msg) => {
-  if (msg.text === "ping") {
+  if (msg.reply_to_message) {
+    bot.sendMessage(msg.chat.id, wana.toRomaji(msg.reply_to_message.text.replace(/^\/r(@toromajibot)? /g, ""))).then(cls)
+  } else if (msg.text === "ping") {
     bot.sendMessage(msg.chat.id, 'hello, world').then(cls)
   } else {
     bot.sendMessage(msg.chat.id, wana.toRomaji(msg.text.replace(/^\/r(@toromajibot)? /g, ""))).then(cls)
