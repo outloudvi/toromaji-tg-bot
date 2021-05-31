@@ -1,0 +1,3 @@
+// Deta seems to only accept @/index.js as the entrypoint with no configurable options, so...
+
+module.exports = require('./dist')
